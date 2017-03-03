@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Форма заказов &mdash; HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body class="page-index">
+    <header class="header-main">
+      <h1 class="visually-hidden">Интернет магазин вязаных штучек &laquo;Мишка&raquo;</h1>
+      <nav class="nav-main  nav-main--closed  nav-main--nojs">
+        <div class="nav-main__inner">
+          <div class="nav-main__logo-wrap">
+            <button class="nav-main__toggle" type="button">Показать меню</button>
+            <a class="nav-main__logo" href="index.html">
+              <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="header-main__logo-img" src="img/logo-mobile.svg" alt="Мишка">
+              </picture>
+            </a>
+          </div>
+          <div class="nav-main__wrap">
+            <ul class="nav-main__list">
+              <li class="nav-main__item"><a class="nav-main__link" href="catalog.html">Каталог товаров</a></li>
+              <li class="nav-main__item"><a class="nav-main__link">Вязание на заказ</a></li>
+            </ul>
+            <ul class="nav-main__list">
+              <li class="nav-main__item"><a class="nav-main__link  nav-main__link--search" href="#">Поиск по сайту</a></li>
+              <li class="nav-main__item"><a class="nav-main__link  nav-main__link--cart" href="#">Корзина: пока пуста</a></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="nav-main__list">
+          <li class="nav-main__item"><a href="#">Новые поступления</a></li>
+          <li class="nav-main__item"><a href="#">Распродажа</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="headline">
+        <h2 class="headline__title">Вязание на заказ</h2>
+      </div>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="form__text">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+        <fieldset class="form__fieldset">
+          <b class="form__title">Тип</b>
+          <div class="form__inner">
+            <h2 class="visually-hidden">Выберите тип изделия</h2>
+            <input class="form__radio" type="radio" id="accessory" name="type" value="accessory" checked>
+            <label class="form__label" for="accessory">Аксессуары для интерьера</label>
+            <input class="form__radio" type="radio" id="toy" name="type" value="toy">
+            <label class="form__label" for="toy">Детская игрушка</label>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <b class="form__title">Цвет</b>
+          <div class="form__inner">
+            <h2 class="visually-hidden">Выберите цвет</h2>
+            <input class="form__checkbox" type="checkbox" id="white" name="color" value="white" checked>
+            <label class="form__label" for="white">Белый</label>
+            <input class="form__checkbox" type="checkbox" id="grey" name="color" value="grey" checked>
+            <label class="form__label" for="grey">Серый</label>
+            <input class="form__checkbox" type="checkbox" id="tiffany" name="color" value="tiffany">
+            <label class="form__label" for="tiffany">"Тиффани"</label>
+            <input class="form__checkbox" type="checkbox" id="black" name="color" value="black">
+            <label class="form__label" for="black">Черный</label>
+            <input class="form__checkbox" type="checkbox" id="pink" name="color" value="pink">
+            <label class="form__label" for="pink">Розовый</label>
+            <input class="form__checkbox" type="checkbox" id="orange" name="color" value="orange">
+            <label class="form__label" for="orange">Оранжевый</label>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <b class="form__title">ФИО</b>
+          <div class="form__inner">
+            <h2 class="visually-hidden">Заполните форму</h2>
+            <label class="form__label" for="name">Имя:</label>
+            <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+            <label class="form__label" for="family">Фамилия:</label>
+            <input class="form__input" type="text" name="surname" id="family" placeholder="Укажите фамилию*" required>
+            <label class="form__label-name" for="middle-name">Отчество:</label>
+            <input class="form__input" type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <div class="form__inner">
+            <h2 class="visually-hidden">Заполните форму</h2>
+            <label class="form__label-text" for="phone">Тел</label>
+            <input class="form__input" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*" required>
+            <label class="form__label-text" for="email">e-mail</label>
+            <input class="form__input" type="email" name="email" id="email" placeholder="Ваш Email*" required>
+            <label class="visually-hidden" for="comment">Опишите все ваши пожелания к заказу</label>
+            <textarea class="form__textarea" name="comment" id="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="form__text">*Все поля являются обязательными</div>
+          </div>
+        </fieldset>
+        <input class="btn" type="submit" value="Отправить заказ">
+      </form>
+    </main>
+    <footer class="footer-main">
+      <a class="footer-main__logo"><img class="footer-main__logo-img" src="img/icons/logo-footer.svg" alt="Мишка"></a>
+      <div class="social">
+        <a class="social__icon" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        <a class="social__icon" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        <a class="social__icon" href="https://vk.com/htmlacademy">Мы в Твиттере</a>
+      </div>
+       <div class="footer-main__copyrights">
+        <p class="footer-main__text">Разработано
+          <a href="https://htmlacademy.ru/">
+          <img class="footer-main__img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
