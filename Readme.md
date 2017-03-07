@@ -1,7 +1,8 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Elena Tkacheva](https://up.htmlacademy.ru/adaptive/10/user/165599).
-* Наставник: `Неизвестно`.
+* Студент: [ Elena Tkacheva ](https://github.com/pchela9111/165599-mishka-1).
+  Наставник:  Без наставника (https://htmlacademy.ru/profile/id233737).
+
 
 ---
 
