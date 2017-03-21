@@ -1,0 +1,23 @@
+@font-face {
+font-family: OpenSans;
+src:
+  url(../fonts/opensans.woff),
+  url(../fonts/opensans.woff2);
+font-weight: 400;
+}
+
+@font-face {
+font-family: OpenSans;
+src:
+  url(../fonts/opensansbold.woff),
+  url(../fonts/opensansbold.woff2);
+font-weight: 700;
+}
+
+:root {
+font-size: 62.5%;
+font-family: OpenSans, Arial, sans-serif;
+font-weight: 400;
+font-style: normal;
+color: $text-color-base;
+}
