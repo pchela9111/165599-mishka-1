@@ -270,14 +270,14 @@
   &:hover {
     color: rgba(0, 0, 0, 0.6);
     .nav-main__icon {
-     fill: #63d1bb;
-     opacity: 1;
+      fill: #63d1bb;
+      opacity: 1;
     }
   }
   &:active {
     color: rgba(0, 0, 0, 0.3);
     .nav-main__icon {
-     opacity: 0.3;
+      opacity: 0.3;
     }
   }
   @media (--tablet) {
