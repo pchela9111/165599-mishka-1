@@ -1,0 +1,14 @@
+@import "global/mixins";
+@import "global/variables";
+@import "global/fonts";
+@import "global/media";
+@import "blocks/visually-hidden";
+@import "blocks/btn";
+@import "blocks/page-index";
+@import "blocks/header-main";
+@import "blocks/nav-main";
+@import "blocks/advance";
+@import "blocks/product-week";
+@import "blocks/about-us";
+@import "blocks/reviews";
+@import "blocks/contacts";

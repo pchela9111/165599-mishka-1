@@ -6,12 +6,14 @@ var postcss = require("gulp-postcss");
 var precss = require("precss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var short = require("postcss-short");
 
 gulp.task("style", function() {
   gulp.src("postcss/style.css")
     .pipe(plumber())
     .pipe(postcss([
       precss(),
+      short(),
       autoprefixer({browsers: [
         "last 2 versions"
       ]})
