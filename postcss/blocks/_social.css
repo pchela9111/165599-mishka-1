@@ -1,0 +1,38 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  width: 145px;
+  @media (--tablet) {
+    margin-left: 20px;
+  }
+}
+.social__link {
+  position: relative;
+  size: 24px 29px;
+  font-size: 0;
+  background-color: $secondary-background;
+}
+.social__icon {
+  @mixin  icon;
+  &:hover {
+    fill:#63d1bb;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+  &--inst {
+    fill: #231F20;
+    size: 22px 21px;
+    transform: translate(0px, 5px);
+  }
+  &--fb {
+      fill: #231F20;
+      size: 15px 29px;
+      transform: translate(3px, 0px);
+  }
+  &--tw {
+    fill: #231F20;
+    size: 24px 20px;
+    transform: translate(-3px, 5px);
+  }
+}
