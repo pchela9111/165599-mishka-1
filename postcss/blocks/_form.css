@@ -76,7 +76,7 @@
   @media (--desktop) {
     width: 112px;
   }
-   &::before {
+  &::before {
     content: "";
     position: absolute 7px * * 60px;
     size: 200px 1px;
@@ -188,7 +188,7 @@
         top: 0px;
       }
     }
-     &::after {
+    &::after {
       top: 11px;
       @media (--tablet) {
         top: 15px;
