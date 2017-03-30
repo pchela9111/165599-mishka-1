@@ -1,11 +1,12 @@
 .headline {
+  @mixin fluid-width;
   position: relative;
   background-color: $secondary-background;
   border-top: 1px solid $border-color;
-  @mixin vert-padding 47px, 53px;
+  @mixin vert-padding 47px, 55px;
   @media (--tablet) {
     margin-top: -42px;
-    @mixin vert-padding 57px, 48px;
+    @mixin vert-padding 45px, 48px;
     border-top: none;
     &::before {
       content: "";
@@ -22,6 +23,10 @@
     }
     &--alt-size {
       @mixin vert-padding 60px, 46px;
+      outline: 2px solid red;
+      @media (--desktop) {
+        @mixin vert-padding 57px, 75px;
+      }
     }
   }
   @media (--desktop) {
@@ -29,13 +34,14 @@
   }
 }
 .headline__title {
-  @mixin  container-fluid;
+  display: block;
+  @mixin  container;
   text-align: center;
   font-size: 2.7rem / 3rem;
   @media (--tablet) {
     font-size: 4.3rem / 5rem;
     &--alt-position {
-      margin-left: 55px;
+
     }
   }
   @media (--desktop) {
