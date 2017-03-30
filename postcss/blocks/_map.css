@@ -1,13 +1,13 @@
 .map {
+  position: relative;
   @mixin fluid-width;
-  min-height: 457px;
+  height: 457px;
   background-color: #f3f1ea;
   background-image:url("../img/icon-map-pin.svg"),
   url("../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 67px 100px, auto auto;
   background-position: 145px 165px, center center;
-  margin-bottom: 40px;
   @media (--mobile) {
     @media (--retina) {
       background-image:url("../img/icon-map-pin.svg"), url("../img/map-mobile@2x.jpg");
@@ -18,7 +18,6 @@
     background-image: url("../img/icon-map-pin.svg"), url("../img/map-tablet@1x.jpg");
     background-size: 67px 100px, auto auto;
     background-position: 347px 163px, center center;
-    margin-bottom: 55px;
     @media (--retina) {
       background-image:url("../img/icon-map-pin.svg"), url("../img/map-tablet@2x.jpg");
       background-size: 67px 100px, 768px auto;
@@ -26,6 +25,9 @@
   }
   @media (--desktop) {
     width: 525px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     background-image: url("../img/icon-map-pin.svg"),
     url("../img/map-desktop@1x.jpg");
     background-size: 67px 100px, contain;
