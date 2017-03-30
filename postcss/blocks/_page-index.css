@@ -3,3 +3,7 @@
   padding: 0;
   background-color: $color-primary;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
