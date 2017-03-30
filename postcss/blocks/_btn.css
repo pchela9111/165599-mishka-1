@@ -2,7 +2,7 @@
   display: block;
   box-sizing: border-box;
   text-align: center;
-  padding: 17px;
+  padding: 16px;
   font-size: 1.7rem / 1.6rem;
   font-weight: 700;
   color: $color-secondary;
@@ -31,6 +31,7 @@
       width: 175px;
       font-size: 1.7rem / 1.6rem;
       order: 1;
+      margin-top: 2px;
     }
     @media (--desktop) {
       margin-top: 7px;
@@ -40,15 +41,16 @@
     width: 260px;
     padding: 15px;
     margin: * auto;
+    margin-top: 40px;
     @media (--tablet) {
+      margin-top: 55px;
       width: 230px;
       padding: 16px;
     }
     @media (--desktop) {
       width: 230px;
       margin: 0;
-      margin-top: -108px;
-      margin-left: 175px;
+
     }
   }
   &--modal {
