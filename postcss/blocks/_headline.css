@@ -6,7 +6,7 @@
   @mixin vert-padding 47px, 0px;
   @media (--tablet) {
     margin-top: -42px;
-    @mixin vert-padding 45px, 48px;
+    @mixin vert-padding 58px, 48px;
     border-top: none;
     &::before {
       content: "";
@@ -23,7 +23,7 @@
     }
   }
   @media (--desktop) {
-    @mixin vert-padding 47px, 65px;
+    @mixin vert-padding 49px, 65px;
   }
   &--theme-catalog {
     @mixin vert-padding 51px, 58px;
