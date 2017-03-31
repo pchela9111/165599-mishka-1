@@ -50,7 +50,6 @@
     @media (--desktop) {
       width: 230px;
       margin: 0;
-
     }
   }
   &--modal {
@@ -81,6 +80,9 @@
     @media (--tablet) {
       order: 3;
       width: 100%;
+    }
+    @media (--desktop) {
+      width: 230px;
     }
   }
 }
