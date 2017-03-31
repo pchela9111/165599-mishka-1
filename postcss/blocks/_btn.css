@@ -79,6 +79,7 @@
     padding: 16px;
     margin: * auto;
     @media (--tablet) {
+      order: 3;
       width: 100%;
     }
   }
