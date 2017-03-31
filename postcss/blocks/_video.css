@@ -4,7 +4,6 @@
   @mixin  container;
   @mixin vert-padding 25px, 30px;
   border: 1px solid $border-color;
-  border: 1px solid red;
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
@@ -18,11 +17,10 @@
   @media (--desktop) {
     position: relative;
     align-items: flex-end;
-    height: 455px;
+    @mixin vert-padding 25px, 58px;
   }
 }
 .video__title {
-  color: red;
   position: relative;
   box-sizing: border-box;
   padding: 0;
@@ -35,7 +33,6 @@
     display: block;
   }
   @media (--tablet) {
-    outline: 2px solid red;
     order: 1;
     width: 100%;
     padding-left: 105px;
@@ -46,7 +43,16 @@
     }
   }
   @media (--desktop) {
-    width: 230px;
+    order: 1;
+    box-sizing: border-box;
+    width: 368px;
+    margin-top: 22px;
+    padding-top: 50px;
+    padding-left: 80px;
+    margin-bottom: 34px;
+    span {
+      display: block;
+    }
   }
 }
 .video__icon-video {
@@ -58,9 +64,12 @@
     top: -5px;
     left: 41px;
   }
+  @media (--desktop) {
+    top: -5px;
+    left: 81px;
+  }
 }
 .video__player__wrap {
-  outline: 2px solid blue;
   position: relative;
   @mixin  container;
   size: 260px 150px;
@@ -88,8 +97,15 @@
     }
   }
   @media (--desktop) {
+    order: 0;
     position: absolute 0 * * 0;
-    width: 680px;
+    width: 682px;
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-size: auto auto;
+    @media (--retina) {
+      background-image: url("../img/video-desktop@2x.jpg");
+      background-size: 668px auto;
+    }
   }
 }
 .video__player {
@@ -102,7 +118,6 @@
   margin: 0;
   font-size: 0;
   border: none;
-  outline: none;
   background-color: transparent;
   background-image: url("../img/icon-play.svg");
   background-repeat: no-repeat;
@@ -113,6 +128,10 @@
     top: 43%;
     left: 42%;
   }
+  @media (--desktop) {
+    top: 42%;
+    left: 297px;
+  }
   &:hover {
     transform: scale(1.2);
   }
@@ -122,7 +141,6 @@
   }
 }
 .video__text {
-  color: red;
   width: 190px;
   margin: * auto;
   font-size: 1.3rem / 2.4rem;
@@ -140,8 +158,13 @@
     }
   }
   @media (--desktop) {
-    position: absolute;
-    width: 367px;
-
+    display: block;
+    box-sizing: border-box;
+    order: 2;
+    width: 368px;
+    margin: 0;
+    padding-left: 80px;
+    padding-right: 60px;
+    margin-bottom: 45px;
   }
 }
