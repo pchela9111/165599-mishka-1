@@ -79,10 +79,12 @@
     margin: * auto;
     @media (--tablet) {
       order: 3;
-      width: 100%;
+      width: 585px;
     }
     @media (--desktop) {
       width: 230px;
+      margin: 0;
+      margin-right: 57px;
     }
   }
 }
