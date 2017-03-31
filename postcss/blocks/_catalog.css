@@ -6,21 +6,20 @@
     @mixin vert-padding 81px, 20px;
   }
   @media (--desktop) {
-    @mixin vert-padding 122px, 20px;
+    @mixin vert-padding 122px, 106px;
   }
 }
 .catalog__list {
   @mixin  container;
-  padding-bottom: 3px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   @media (--tablet) {
-    padding-bottom: 50px;
-    margin-bottom: 3px;
+    margin-bottom: 53px;
   }
   @media (--desktop) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 3px;
   }
 }
 .catalog__item {
@@ -42,7 +41,6 @@
     flex-direction: row;
     width: 666px;
     margin-bottom: 53px;
-
   }
   @media (--desktop) {
     flex-direction: column;
