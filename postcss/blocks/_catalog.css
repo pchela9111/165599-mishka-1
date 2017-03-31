@@ -15,6 +15,7 @@
   margin-bottom: 25px;
   @media (--tablet) {
     padding-bottom: 50px;
+    margin-bottom: 3px;
   }
   @media (--desktop) {
     display: flex;
