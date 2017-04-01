@@ -9,10 +9,11 @@
     @mixin vert-padding 72px, 33px;
   }
   @media (--desktop) {
-    @mixin vert-padding 118px, 30px;
+    @mixin vert-padding 116px, 30px;
   }
 }
 .form__text {
+  color: red;
   @mixin  container;
   padding: 0;
   margin: 0;
@@ -41,6 +42,7 @@
   }
 }
 .form__container {
+  outline: 2px solid yellow;
   box-sizing: border-box;
   @mixin  container;
   @media (--tablet) {
@@ -64,8 +66,9 @@
   }
 }
 .form__title {
-  position: relative;
-  display: block;
+
+  display: flex;
+
   font-size: 1.7rem / 1.6rem;
   font-weight: 700;
   color: $color-accent;
@@ -74,15 +77,22 @@
     margin-top: 17px;
   }
   @media (--desktop) {
-    width: 112px;
+    outline: 2px solid green;
+
   }
-  &::before {
-    content: "";
-    position: absolute 7px * * 60px;
-    size: 200px 1px;
-    background-color:  $color-accent;
+  &::after {
+    display: block;
+    flex-grow: 1;
+    content: '';
+    margin: auto *;
+    margin-right: 0;
+    margin-left: 22px;
+    border-bottom: 1px solid $color-accent;
     @media (--tablet) {
-      size: 0;
+      border-bottom: none;
+    }
+    @media (--desktop) {
+      border-bottom: none;
     }
   }
   &--margin {
@@ -96,6 +106,7 @@
   }
 }
 .form__inner {
+  outline: 2px solid pink;
   box-sizing: border-box;
   @mixin vert-padding 25px, 14px;
   @media (--tablet) {
@@ -127,6 +138,7 @@
   display: none;
 }
 .form__label {
+  color: red;
   display: block;
   box-sizing: border-box;
   position: relative;
@@ -142,37 +154,41 @@
     padding-left: 64px;
     margin-bottom: 14px;
     @media (--tablet) {
-      @mixin vert-padding 15px, 17px;
+      @mixin vert-padding 14px, 17px;
+      padding-left: 80px;
       width: 500px;
       margin-bottom: 27px;
     }
     @media (--desktop) {
       width: 875px;
+      @mixin vert-padding 15px, 17px;
     }
     &::before {
       display: block;
       box-sizing: border-box;
       content: "";
-      position: absolute 0px * * 2px;
+      position: absolute -5px * * 2px;
       size: 38px;
       border: 1px solid $color-secondary;
+      border: 1px solid red;
       background-color: transparent;
       border-radius: 50%;
       transition: 80ms;
       @media (--tablet) {
         size: 51px;
+        top: -1px;
         left: 0;
       }
     }
     &::after {
       display: none;
       content: "";
-      position: absolute 8px * * 13px;
+      position: absolute 6px * * 13px;
       size: 16px;
       border-radius: 50%;
       background-color: $color-accent;
       @media (--tablet) {
-        position: absolute 15px * * 15px;
+        position: absolute 14px * * 15px;
         size: 21px;
       }
     }
