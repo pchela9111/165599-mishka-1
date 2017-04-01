@@ -40,7 +40,13 @@
       background-color: $secondary-background;
     }
     @media (--desktop) {
-      @mixin vert-padding 49px, 22px;
+      @mixin vert-padding 49px, 27px;
+    }
+  }
+  &--alt-grey {
+    @media (--tablet) {
+      @mixin vert-padding 42px, 20px;
+      background-color: $secondary-background;
     }
   }
 }
@@ -56,6 +62,7 @@
   @media (--desktop) {
     padding-left: 60px;
   }
+
   &--l-size {
     @media (--tablet) {
       @mixin vert-padding 2px, 29px;
@@ -64,6 +71,7 @@
     padding-right: 175px;
     }
   }
+
   &--s-size {
     @media (--desktop) {
       padding-left: 175px;
@@ -76,7 +84,6 @@
   font-size: 1.7rem / 1.6rem;
   font-weight: 700;
   color: $color-accent;
-  color: red;
   text-transform: uppercase;
   &::after {
     display: block;
@@ -96,10 +103,12 @@
   @media (--tablet) {
     margin-top: 17px;
   }
-  &--margin {
+
+  &--top {
     margin-top: 10px;
     @media (--tablet) {
       width: 160px;
+      margin-top: 22px;
     }
     @media (--desktop) {
       width: 112px;
@@ -107,7 +116,6 @@
   }
 }
 .form__inner {
-  outline: 2px solid red;
   box-sizing: border-box;
   @mixin vert-padding 25px, 14px;
   @media (--tablet) {
@@ -120,14 +128,15 @@
   @media (--desktop) {
     width: 875px;
   }
+
   &--alt-size {
     justify-content: space-between;
     @mixin vert-padding 29px, 0;
     @media (--tablet) {
-      align-items: stretch;
-      @mixin vert-padding 15px, 25px;
+      @mixin vert-padding 3px, 25px;
     }
     @media (--desktop) {
+      @mixin vert-padding 0px, 25px;
       padding-right: 175px;
     }
   }
@@ -149,6 +158,7 @@
     padding-left: 80px;
     font-size: 1.9rem / 1.8rem;
   }
+
   &--radio {
     @mixin vert-padding 10px, 10px;
     padding-left: 64px;
@@ -182,16 +192,16 @@
       }
     }
   }
-    @media (--tablet) {
-      @mixin vert-padding 14px, 17px;
-      padding-left: 80px;
-      width: 500px;
-      margin-bottom: 27px;
-    }
-    @media (--desktop) {
-      width: 875px;
-      @mixin vert-padding 15px, 17px;
-    }
+  @media (--tablet) {
+    @mixin vert-padding 14px, 17px;
+    padding-left: 80px;
+    width: 500px;
+    margin-bottom: 27px;
+  }
+  @media (--desktop) {
+    width: 875px;
+    @mixin vert-padding 15px, 17px;
+  }
   &--radio:first-of-type {
     padding-bottom: 5px;
     @media (--tablet) {
@@ -228,6 +238,17 @@
         top: -1px;
       }
     }
+    @media (--tablet) {
+      width: 250px;
+      @mixin vert-padding 15px, 17px;
+      padding-left: 81px;
+      margin-bottom: 26px;
+    }
+    @media (--desktop) {
+      width: 263px;
+      @mixin vert-padding 15px, 17px;
+      margin-bottom: 26px;
+    }
     &:last-of-type {
       margin-bottom: 20px;
     }
@@ -249,17 +270,6 @@
         }
       }
     }
-    @media (--tablet) {
-      width: 250px;
-      @mixin vert-padding 15px, 17px;
-      padding-left: 81px;
-      margin-bottom: 26px;
-    }
-    @media (--desktop) {
-      width: 263px;
-      @mixin vert-padding 15px, 17px;
-      margin-bottom: 26px;
-    }
   }
 }
 .form__radio:checked + .form__label--radio::after {
@@ -275,7 +285,6 @@
   }
 }
 .form__label-text {
-  color: red;
   display: block;
   box-sizing: border-box;
   position: relative;
@@ -283,6 +292,7 @@
   font-size: 1.7rem / 1.8rem;
   font-weight: 700;
   @media (--tablet) {
+    margin-top: 12px;
     font-size: 1.9rem / 1.8rem;
     width: 125px;
   }
@@ -302,7 +312,6 @@
   font-size: 1.7rem / 1.8rem;
   border: none;
   border-bottom: 2px solid $text-color-base;
-  border-bottom: 2px solid red;
   background-color: transparent;
   margin-bottom: 24px;
   transition: all 80ms;
@@ -319,10 +328,11 @@
   }
   @media (--tablet) {
     width: 375px;
-    @mixin vert-padding 0px, 14px;
+    height: 50px;
+    @mixin vert-padding 6px, 10px;
     padding-left: 18px;
     font-size: 1.9rem / 1.8rem;
-    margin-bottom: 38px;
+    margin-bottom: 26px;
   }
   @media (--desktop) {
     width: 573px;
@@ -346,8 +356,8 @@
     margin-bottom: 34px;
     @media (--tablet) {
       width: 500px;
-      @mixin vert-padding 5px, 14px;
-      margin-bottom: 25px;
+      @mixin vert-padding 6px, 10px;
+      margin-bottom: 20px;
     }
     @media (--desktop) {
       width: 700px;
@@ -365,10 +375,10 @@
     transform: translate(228px, -75px);
     fill: #cccccc;
     @media (--tablet) {
-      transform: translate(615px, 9px);
+      transform: translate(617px, 17px);
     }
     @media (--desktop) {
-      transform: translate(780px, 9px);
+      transform: translate(783px, 18px);
     }
   }
   &--mail {
@@ -376,10 +386,10 @@
     transform: translate(225px, -75px);
     fill: #cccccc;
     @media (--tablet) {
-      transform: translate(615px, 85px);
+      transform: translate(615px, 92px);
     }
     @media (--desktop) {
-      transform: translate(777px, 85px);
+      transform: translate(779px, 94px);
     }
   }
 }
@@ -421,8 +431,10 @@
   }
   @media (--desktop) {
     width: 700px;
+    min-height: 143px;
     padding-top: 15px;
     padding-left: 15px;
+    margin-left: 53px;
     margin-right: auto;
     margin-bottom: 26px;
   }
