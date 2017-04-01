@@ -47,6 +47,7 @@
   }
 }
 .footer-main__text {
+  color: red;
   padding-right: 20px;
   font-size: 1.8rem / 1.9rem;
   font-weight: 700;
