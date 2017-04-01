@@ -36,6 +36,7 @@
     @mixin vert-padding 50px, 25px;
     @mixin  fluid-width;
     &--grey {
+      outline: 2px solid blue;
       @mixin vert-padding 50px, 22px;
       background-color: $secondary-background;
     }
@@ -66,9 +67,7 @@
   }
 }
 .form__title {
-
   display: flex;
-
   font-size: 1.7rem / 1.6rem;
   font-weight: 700;
   color: $color-accent;
@@ -78,7 +77,6 @@
   }
   @media (--desktop) {
     outline: 2px solid green;
-
   }
   &::after {
     display: block;
@@ -212,48 +210,19 @@
     }
   }
   &--checkbox {
-    @mixin vert-padding 9px, 9px;
+    @mixin vert-padding 10px, 9px;
     padding-left: 64px;
-    margin-bottom: 25px;
-    @media (--tablet) {
-      width: 250px;
-      @mixin vert-padding 14px, 17px;
-      margin-bottom: 28px;
-      &:nth-of-type(2n) {
-        padding-left: 92px;
-        &::before {
-          left: 13px;
-        }
-      }
-    }
-    @media (--desktop) {
-      width: 263px;
-      &:nth-of-type(2n) {
-        padding-left: 79px;
-        &::before {
-          left: 0;
-        }
-      }
-    }
+    margin-bottom: 24px;
     &::before {
       display: block;
       box-sizing: border-box;
       content: "";
-      position: absolute 0px * * 2px;
+      position: absolute 0px * * 1px;
       size: 38px;
       border: 2px solid $color-secondary;
       background-color: transparent;
-      @media (--tablet) {
-        size: 52px;
-        left: 0;
-      }
-      @media (--desktop) {
-        top: -1px;
-      }
     }
-  }
-  &--checkbox:last-of-type {
-    margin-bottom: 21px;
+
   }
 }
 .form__radio:checked + .form__label--radio::after {
