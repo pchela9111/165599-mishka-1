@@ -12,7 +12,7 @@
   }
   @media (--tablet) {
     align-items: center;
-    @mixin vert-padding 0px, 0px;
+    @mixin vert-padding 0, 45px;
   }
   @media (--desktop) {
     position: relative;

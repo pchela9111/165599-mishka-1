@@ -3,7 +3,7 @@
   @mixin vert-padding 30px, 59px;
   background-color: $color-primary;
   @media (--tablet) {
-    @mixin vert-padding 81px, 109px;
+    @mixin vert-padding 81px, 64px;
   }
   @media (--desktop) {
     @mixin vert-padding 122px, 106px;
