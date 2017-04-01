@@ -36,7 +36,7 @@
   }
   &--grey {
     @media (--tablet) {
-      @mixin vert-padding 50px, 22px;
+      @mixin vert-padding 50px, 26px;
       background-color: $secondary-background;
     }
     @media (--desktop) {
@@ -76,6 +76,7 @@
   font-size: 1.7rem / 1.6rem;
   font-weight: 700;
   color: $color-accent;
+  color: red;
   text-transform: uppercase;
   &::after {
     display: block;
@@ -106,6 +107,7 @@
   }
 }
 .form__inner {
+  outline: 2px solid red;
   box-sizing: border-box;
   @mixin vert-padding 25px, 14px;
   @media (--tablet) {
@@ -226,6 +228,9 @@
         top: -1px;
       }
     }
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
     &:nth-of-type(2n) {
       @media (--tablet) {
         padding-left: 92px;
@@ -270,6 +275,7 @@
   }
 }
 .form__label-text {
+  color: red;
   display: block;
   box-sizing: border-box;
   position: relative;
@@ -296,6 +302,7 @@
   font-size: 1.7rem / 1.8rem;
   border: none;
   border-bottom: 2px solid $text-color-base;
+  border-bottom: 2px solid red;
   background-color: transparent;
   margin-bottom: 24px;
   transition: all 80ms;
@@ -315,7 +322,7 @@
     @mixin vert-padding 0px, 14px;
     padding-left: 18px;
     font-size: 1.9rem / 1.8rem;
-    margin-bottom: 37px;
+    margin-bottom: 38px;
   }
   @media (--desktop) {
     width: 573px;
