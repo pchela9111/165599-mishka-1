@@ -221,7 +221,26 @@
       size: 38px;
       border: 2px solid $color-secondary;
       background-color: transparent;
+      @media (--tablet) {
+        size: 52px;
+        left: 0;
+      }
+
     }
+    @media (--tablet) {
+      width: 250px;
+      @mixin vert-padding 15px, 17px;
+      padding-left: 81px;
+      margin-bottom: 26px;
+      &:nth-of-type(2n) {
+        padding-left: 92px;
+        background-color: pink;
+        &::before {
+          left: 12px;
+        }
+      }
+    }
+
 
   }
 }
