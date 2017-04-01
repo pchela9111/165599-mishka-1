@@ -3,7 +3,7 @@
   position: relative;
   background-color: $secondary-background;
   border-top: 1px solid $border-color;
-  @mixin vert-padding 47px, 0px;
+  @mixin vert-padding 47px, 53px;
   @media (--tablet) {
     margin-top: -42px;
     @mixin vert-padding 58px, 48px;
@@ -29,7 +29,6 @@
     @mixin vert-padding 51px, 58px;
     @media (--tablet) {
       @mixin vert-padding 67px, 48px;
-      outline: 2px solid red;
     }
     @media (--desktop) {
       @mixin vert-padding 57px, 75px;
@@ -37,7 +36,6 @@
   }
 }
 .headline__title {
-  color: red;
   display: block;
   @mixin  container;
   text-align: center;
