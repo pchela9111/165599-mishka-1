@@ -14,12 +14,14 @@ var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
 var run = require("run-sequence");
 var del = require("del");
+var short = require("postcss-short");
 
 gulp.task("style", function() {
   gulp.src("postcss/style.css")
     .pipe(plumber())
     .pipe(postcss([
       precss(),
+      short(),
       autoprefixer({browsers: [
         "last 2 versions"
       ]}),
