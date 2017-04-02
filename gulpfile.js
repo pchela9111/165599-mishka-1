@@ -9,7 +9,7 @@ var server = require("browser-sync").create();
 var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
-var imagemin = require("gulp-imagemin");
+var image = require("gulp-image");
 var svgmin = require("gulp-svgmin");
 var svgstore = require("gulp-svgstore");
 var run = require("run-sequence");
@@ -37,11 +37,12 @@ gulp.task("style", function() {
 });
 
 gulp.task("images", function() {
-  return gulp.src("build/img/**/*.{png,jpg,gif}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true})
-    ]))
+  return gulp.src("build/img/*.{png,jpg,gif,svg}")
+    .pipe(image({
+      mozjpeg: false,
+      jpegoptim: false,
+      jpegRecompress: true
+    }))
     .pipe(gulp.dest("build/img"));
 });
 
@@ -52,7 +53,7 @@ gulp.task("sprite", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/icons"));
 });
 
 gulp.task("build", function(fn) {
