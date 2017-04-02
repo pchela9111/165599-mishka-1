@@ -17,8 +17,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
+    "postcss-short": "^3.0.3",
     "precss": "1.4.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "short": "^2.6.0"
   },
   "scripts": {
     "test": "editorconfig-cli",
