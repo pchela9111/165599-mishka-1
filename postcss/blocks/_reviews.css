@@ -15,6 +15,9 @@
   @media (--desktop) {
     @mixin vert-padding 34px, 0;
     background-image: none;
+    @media (--retina) {
+      background-image: none;
+    }
   }
 }
 .reviews__container {
