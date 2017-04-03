@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "gulp build",
+    "start": "npm build && gulp serve"
+  },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.1.x",
     "autoprefixer": "6.7.x",
@@ -21,11 +26,6 @@
     "precss": "1.4.0",
     "run-sequence": "^1.2.2"
   },
-  "scripts": {
-    "test": "editorconfig-cli",
-    "build": "gulp build",
-    "start": "npm build && gulp serve"
-  },
   "editorconfig-cli": [
     "*.html",
     "*.json",
@@ -38,5 +38,4 @@
     "node": "6.10"
   }
 }
-
 
