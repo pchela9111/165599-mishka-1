@@ -3,20 +3,33 @@
   @mixin vert-padding 30px, 59px;
   background-color: $color-primary;
   @media (--tablet) {
-    @mixin vert-padding 77px, 20px;
+    @mixin vert-padding 81px, 64px;
+  }
+  @media (--desktop) {
+    @mixin vert-padding 122px, 106px;
   }
 }
 .catalog__list {
   @mixin  container;
-  padding-bottom: 3px;
+  margin-bottom: 28px;
   @media (--tablet) {
-    padding-bottom: 50px;
+    margin-bottom: 53px;
+  }
+  @media (--desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3px;
   }
 }
 .catalog__item {
+  box-sizing: border-box;
   width: 260px;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   border: 1px solid $border-color;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
@@ -28,9 +41,10 @@
     flex-direction: row;
     width: 666px;
     margin-bottom: 53px;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+  }
+  @media (--desktop) {
+    flex-direction: column;
+    width: 316px;
   }
 }
 .catalog__img-wrap {
@@ -38,9 +52,6 @@
   max-width: 100%;
   padding: 0;
   margin: 0;
-  @media (--tablet) {
-
-  }
 }
 .catalog__img {
   display: block;
@@ -53,13 +64,18 @@
   align-items: flex-start;
   box-sizing: border-box;
   width: 260px;
-  @mixin vert-padding 26px, 1px;
-  padding-left: 29px;
+  @mixin vert-padding 27px, 1px;
+  padding-left: 27px;
   @media (--tablet) {
     size: 332px;
-    @mixin vert-padding 26px, 0px;
     margin-top: 0;
+    padding-top: 26px;
     padding-left: 26px;
+  }
+  @media (--desktop) {
+    size: 316px 197px;
+    padding-top: 28px;
+    padding-left: 25px;
   }
 }
 .catalog__title {
@@ -91,7 +107,7 @@
   margin-bottom: 19px;
   @media (--tablet) {
     font-size: 1.5rem / 3rem;
-    &--s-size {}
+    margin-bottom: 0;
   }
 }
 .catalog__wrap-order {
@@ -101,8 +117,13 @@
   @media (--tablet) {
     margin-top: auto;
     width: 268px;
-    @mixin vert-padding 23px, 25px;
+    @mixin vert-padding 22px, 24px;
     margin-left: 6px;
+  }
+  @media (--desktop) {
+    width: 255px;
+    @mixin vert-padding 22px, 24px;
+    margin-left: 2px;
   }
 }
 .catalog__text-price {
@@ -121,17 +142,11 @@
   right: 0;
   opacity: 0.2;
   transition: 80ms;
-    &:hover {
-      fill: #63d1bb;
-      opacity: 1;
-    }
-    &:active {
-      opacity: 0.3;
-    }
-  @media (--tablet) {
-
+  &:hover {
+    fill: #63d1bb;
+    opacity: 1;
   }
-  @media (--desktop) {
-
+  &:active {
+    opacity: 0.3;
   }
 }
