@@ -10,6 +10,8 @@
   }
 }
 .catalog__list {
+  display: flex;
+  flex-wrap: wrap;
   @mixin  container;
   margin-bottom: 28px;
   @media (--tablet) {
