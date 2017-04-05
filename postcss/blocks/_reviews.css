@@ -7,16 +7,16 @@
     background-repeat: no-repeat;
     background-size: auto auto;
     background-position: left top;
+    @media (--desktop) {
+      @mixin vert-padding 34px, 0;
+      background-image: none;
+      @media (--retina) {
+        background-image: none;
+      }
+    }
     @media (--retina) {
       background-image: url("../img/review@2x.jpg");
       background-size: 350px auto;
-    }
-  }
-  @media (--desktop) {
-    @mixin vert-padding 34px, 0;
-    background-image: none;
-    @media (--retina) {
-      background-image: none;
     }
   }
 }
@@ -48,7 +48,7 @@
   font-size: 2.5rem / 3rem;
   margin-bottom: 24px;
   @media (--tablet) {
-    width: 335px;
+    width: 470px;
     font-size: 4.3rem / 5rem;
     margin-left: -4px;
     margin-bottom: 32px;
