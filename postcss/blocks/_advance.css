@@ -122,11 +122,12 @@
   }
 }
 .advance__link {
-  width: 130px;
-  margin-left: 50px;
+  @mixin container;
+
   font-size: 1.9rem / 2.4rem;
   font-weight: 700;
   color: $color-primary;
+  color: red;
   text-decoration: none;
   transition: 80ms;
   span {
