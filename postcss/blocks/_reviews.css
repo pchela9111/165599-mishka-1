@@ -7,17 +7,16 @@
     background-repeat: no-repeat;
     background-size: auto auto;
     background-position: left top;
+    @media (--retina) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
     @media (--desktop) {
       @mixin vert-padding 34px, 0;
       background-image: none;
       @media (--retina) {
         background-image: none;
       }
-    }
-
-    @media (--retina) {
-      background-image: url("../img/review@2x.jpg");
-      background-size: 350px auto;
     }
   }
 }
