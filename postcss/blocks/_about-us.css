@@ -52,6 +52,7 @@
 }
 
 .about-us__item {
+  width: 260px;
   position: relative;
   padding: 0;
   margin: 0;
@@ -63,8 +64,9 @@
     display: block;
   }
   @media (--tablet) {
-    flex: 0 0 50%;
+    flex: 0 0 48%;
     @mixin vert-padding 55px, 0;
+    padding-right: 12px;
     font-size: 2rem / 2.3rem;
     margin-bottom: 54px;
     &:nth-child(1) {
