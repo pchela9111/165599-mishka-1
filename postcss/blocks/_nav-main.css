@@ -57,7 +57,7 @@
   }
 }
 .nav-main__toggle {
-  position: absolute 27px 50px * *;
+  position: absolute 27px 0 * *;
   z-index: 2;
   display: block;
   size: 23px;
@@ -94,6 +94,7 @@
   }
 }
 .nav-main__logo-wrap {
+  @mixin container;
   position: relative;
   display: flex;
   justify-content: center;
