@@ -91,7 +91,6 @@
   list-style: none;
   @media (--tablet) {
     display: flex;
-
     @mixin container;
   }
 }
@@ -129,7 +128,6 @@
   font-weight: 700;
   color: $color-primary;
   text-decoration: none;
-  background-color: $color-accent;
   transition: 80ms;
   span {
     display: block;
@@ -150,8 +148,6 @@
     box-sizing: border-box;
     width: 170px;
     margin-left: 32px;
-
-
     font-size: 2rem / 3rem;
   }
   @media (--desktop) {
