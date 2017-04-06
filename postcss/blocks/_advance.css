@@ -91,15 +91,18 @@
   list-style: none;
   @media (--tablet) {
     display: flex;
+    align-items: flex-start;
     @mixin container;
   }
 }
 .advance__item {
+  @mixin fluid-width;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: #63d1bb;
+  background-color: $color-accent;
+  @mixin vert-padding 25px, 30px;
   transition: all 80ms;
   &--alt-color {
     background-color: #56c3b2;
@@ -111,15 +114,18 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
     width: 334px;
+    padding-top: 27px;
   }
   @media (--desktop) {
     width: 525px;
+    padding-bottom: 35px;
   }
 }
 .advance__link {
-  @mixin container;
-  @mixin vert-padding 25px, 30px;
+  width: 130px;
+  margin-left: 50px;
   font-size: 1.9rem / 2.4rem;
   font-weight: 700;
   color: $color-primary;
@@ -142,14 +148,15 @@
   }
   @media (--tablet) {
     box-sizing: border-box;
-    width: 334px;
-    outline: 2px solid red;
-    @mixin vert-padding 28px, 30px;
-    padding-left: 36px;
+    width: 170px;
+    margin-left: 32px;
+
+
     font-size: 2rem / 3rem;
   }
   @media (--desktop) {
-    padding-bottom: 35px;
+    width: 200px;
+    margin-left: 37px;
   }
 }
 .advance__icon {
