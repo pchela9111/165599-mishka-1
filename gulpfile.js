@@ -26,7 +26,7 @@ gulp.task("style", function() {
         "last 2 versions"
       ]}),
         mqpacker({
-        sort: true
+        sort: false
       })
     ]))
     .pipe(gulp.dest("build/css"))
@@ -56,17 +56,6 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("build/img/icons"));
 });
 
-gulp.task("build", function(fn) {
-  run(
-    "clean",
-    "copy",
-    "style",
-    "images",
-    "sprite",
-    fn
-  );
-});
-
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
@@ -80,6 +69,17 @@ gulp.task("copy", function() {
 
 gulp.task('clean', function() {
   return del('build');
+});
+
+gulp.task("build", function(fn) {
+  run(
+    "clean",
+    "copy",
+    "style",
+    "images",
+    "sprite",
+    fn
+  );
 });
 
 gulp.task('html:copy', function() {
