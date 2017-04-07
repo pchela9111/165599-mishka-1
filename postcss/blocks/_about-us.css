@@ -50,7 +50,6 @@
     margin-bottom: 0;
   }
 }
-
 .about-us__item {
   width: 260px;
   position: relative;
@@ -110,9 +109,11 @@
   }
   &--like {
     size: 34px 27px;
-    transform: translate(8px, -48px);
+    top: 5px;
+    left: 8px;
     @media (--desktop) {
-      transform: translate(6px, -48px);
+      top: 5px;
+      left: 7px;
     }
   }
   &--thread {
