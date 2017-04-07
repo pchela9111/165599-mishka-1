@@ -99,9 +99,9 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+
   background-color: $color-accent;
-  @mixin vert-padding 25px, 30px;
+  @mixin vert-padding 25px, 17px;
   transition: all 80ms;
   &--alt-color {
     background-color: #56c3b2;
@@ -114,25 +114,28 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 334px;
-    padding-top: 27px;
+    @mixin vert-padding 27px, 27px;
   }
   @media (--desktop) {
     width: 525px;
-    padding-bottom: 35px;
+    @mixin vert-padding 26px, 35px;
   }
 }
 .advance__link {
   @mixin container;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 1.9rem / 2.4rem;
   font-weight: 700;
   color: $color-primary;
   text-decoration: none;
   transition: 80ms;
-  span {
-    display: block;
-  }
   &:hover {
-    transform: scaleY(0.91);
+    .advance__text {
+      transform: scaleY(0.91);
+    }
+
     .advance__icon {
       opacity: 0.7;
     }
@@ -145,39 +148,42 @@
   }
   @media (--tablet) {
     box-sizing: border-box;
-    width: 170px;
-    margin-left: 32px;
+    width: 260px;
+    margin-left: 35px;
     font-size: 2rem / 3rem;
   }
   @media (--desktop) {
-    width: 200px;
-    margin-left: 37px;
+    width: 450px;
+
   }
 }
+.advance__text {
+  width: 130px;
+}
 .advance__icon {
-  @mixin  icon;
+
   &--lamp {
     fill: #149080;
     size: 41px 62px;
-    transform: translate(214px, -50px);
+
     opacity: 0.5;
     @media (--tablet) {
-      transform: translate(221px, -58px);
+
     }
     @media (--desktop) {
-      transform: translate(412px, -58px);
+
     }
   }
   &--toy {
     fill: #149080;
     size: 61px 61px;
-    transform: translate(203px, -53px);
+
     opacity: 0.5;
     @media (--tablet) {
-      transform: translate(203px, -56px);
+
     }
     @media (--desktop) {
-      transform: translate(395px, -56px);
+
     }
   }
 }
