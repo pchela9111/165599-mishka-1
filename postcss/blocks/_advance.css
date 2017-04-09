@@ -91,6 +91,7 @@
   list-style: none;
   @media (--tablet) {
     display: flex;
+    flex-wrap: wrap;
     @mixin container;
   }
 }
@@ -99,7 +100,6 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-
   background-color: $color-accent;
   @mixin vert-padding 25px, 17px;
   transition: all 80ms;
@@ -135,7 +135,6 @@
     .advance__text {
       transform: scaleY(0.91);
     }
-
     .advance__icon {
       opacity: 0.7;
     }
@@ -154,36 +153,20 @@
   }
   @media (--desktop) {
     width: 450px;
-
   }
 }
 .advance__text {
   width: 130px;
 }
 .advance__icon {
-
   &--lamp {
     fill: #149080;
     size: 41px 62px;
-
     opacity: 0.5;
-    @media (--tablet) {
-
-    }
-    @media (--desktop) {
-
-    }
   }
   &--toy {
     fill: #149080;
     size: 61px 61px;
-
     opacity: 0.5;
-    @media (--tablet) {
-
-    }
-    @media (--desktop) {
-
-    }
   }
 }
