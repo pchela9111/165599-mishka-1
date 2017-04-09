@@ -43,6 +43,7 @@
   @media (--tablet) {
     display: flex;
     flex-wrap: wrap;
+    word-wrap: break-word;
     margin-bottom: 29px;
   }
   @media (--desktop) {
@@ -59,9 +60,6 @@
   margin-bottom: 18px;
   font-size: 1.7rem / 2rem;
   font-weight: 700;
-  span {
-    display: block;
-  }
   @media (--tablet) {
     flex: 0 0 48%;
     @mixin vert-padding 55px, 0;
@@ -112,8 +110,8 @@
     top: 5px;
     left: 8px;
     @media (--desktop) {
-      top: 5px;
-      left: 7px;
+      top: px;
+      left: 3px;
     }
   }
   &--thread {
